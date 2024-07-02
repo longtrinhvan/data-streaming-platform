@@ -1,0 +1,6 @@
+org\akka\process\KafkaMessageProcessor.class
+org\akka\config\ConfigEnv.class
+org\akka\common\Common.class
+org\akka\MainApplication.class
+org\akka\model\Message.class
+org\akka\model\Message$MessageBuilder.class
