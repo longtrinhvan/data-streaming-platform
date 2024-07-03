@@ -1,6 +1,9 @@
-org\akka\process\KafkaMessageProcessor.class
-org\akka\config\ConfigEnv.class
+org\akka\service\BusinessService.class
+org\akka\config\ActorMaster.class
+org\akka\config\KafkaConsumer.class
+org\akka\config\MongoCollectionMapping.class
 org\akka\common\Common.class
 org\akka\MainApplication.class
 org\akka\model\Message.class
 org\akka\model\Message$MessageBuilder.class
+org\akka\process\Processing.class

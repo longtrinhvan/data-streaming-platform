@@ -59,6 +59,15 @@ services:
       nofile:
         soft: 65536
         hard: 65536
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: database
   jobmanager:
     image: apache/flink:1.16.0-scala_2.12-java11
     ports:
