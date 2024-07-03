@@ -9,10 +9,7 @@ import akka.kafka.ConsumerSettings;
 import akka.kafka.Subscriptions;
 import akka.kafka.javadsl.Committer;
 import akka.kafka.javadsl.Consumer;
-import akka.stream.alpakka.elasticsearch.ElasticsearchConnectionSettings;
-import akka.stream.alpakka.elasticsearch.ElasticsearchParams;
-import akka.stream.alpakka.elasticsearch.ElasticsearchWriteSettings;
-import akka.stream.alpakka.elasticsearch.WriteMessage;
+import akka.stream.alpakka.elasticsearch.*;
 import akka.stream.alpakka.elasticsearch.javadsl.ElasticsearchFlow;
 import akka.stream.javadsl.Keep;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -54,6 +51,7 @@ public class MainApplication implements CommandLineRunner {
         ConsumerSettings<String, String> consumerSettings = consumerSettings(system);
         CommitterSettings committerSettings = committerSettings(system);
 
+
 //        Consumer.DrainingControl<Done> control = Consumer
 //                .committableSource(
 //                        consumerSettings.withStopTimeout(Duration.ZERO),
@@ -63,8 +61,9 @@ public class MainApplication implements CommandLineRunner {
 //                .toMat(Committer.sink(committerSettings), Consumer::createDrainingControl)
 //                .run(system);
 
-
-        ElasticsearchConnectionSettings connectionSettings = ElasticsearchConnectionSettings.create(ELASTIC_SEARCH_HOST);
+        ElasticsearchConnectionSettings connectionSettings = ElasticsearchConnectionSettings
+                .create(ELASTIC_SEARCH_HOST)
+                ;
 
         Consumer.DrainingControl<Done> control = Consumer
                 .committableSource(
@@ -74,16 +73,20 @@ public class MainApplication implements CommandLineRunner {
                 .asSourceWithContext(ConsumerMessage.CommittableMessage::committableOffset)
                 .map(consumerRecord -> {
                     Message message = generateJsonMapper.readValue(consumerRecord.record().value(), Message.class);
-                    return WriteMessage.createUpdateMessage(message.getIdentify(),
+                    System.out.println(generateJsonMapper.writeValueAsString(message));
+                    return WriteMessage.createUpsertMessage(message.getIdentify(),
                             generateJsonMapper.readValue(
                                     message.getData(),
                                     Message.class));
                 })
                 .via(ElasticsearchFlow
                         .createWithContext(
-                                ElasticsearchParams.V7(ELASTIC_SEARCH_INDEX),
-                                ElasticsearchWriteSettings.create(connectionSettings),
+                                ElasticsearchParams.V5(ELASTIC_SEARCH_INDEX,"_doc"),
+                                ElasticsearchWriteSettings.create(connectionSettings)
+                                        .withBufferSize(5)
+                                        .withApiVersion(ApiVersion.V5),
                                 generateJsonMapper))
+
                 .map(writeResult -> {
                     writeResult
                             .getError()
