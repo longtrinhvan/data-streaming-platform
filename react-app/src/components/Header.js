@@ -4,7 +4,9 @@ import "../styles/Header.css";
 const Header = () => {
   return (
     <header className="header">
-      <h1>Blog</h1>
+      <div className="logo" onClick={() => window.location.hash = "/"}>
+        <h1 className="blog-title">Blog</h1>
+      </div>
       <nav className="menu">
         <ul>
           <li className="dropdown">
