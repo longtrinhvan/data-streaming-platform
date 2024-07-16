@@ -1,0 +1,7 @@
+
+X
+java:S1874+";Remove this use of "RestHighLevelClient"; it is deprecated.(ü¿¨8Ÿ°ö¢‰2
+_
+java:S1874+"BRemove this use of "RestHighLevelClientBuilder"; it is deprecated.(ü¿¨8 °ö¢‰2
+F	java:S1064"+Replace this use of System.out by a logger.(¯ô¤@8åâî¢‰2
+G	java:S1065"+Replace this use of System.out by a logger.(±ÚÉë8æâî¢‰2

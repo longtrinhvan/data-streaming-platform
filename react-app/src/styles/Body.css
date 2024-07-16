@@ -1,0 +1,37 @@
+.body {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Màu nền sáng */
+}
+
+.bioBlock {
+  padding: 20px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #e7f0ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ */
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  transition: color 0.3s; /* Hiệu ứng chuyển đổi */
+}
+
+.title:hover {
+  color: #0056b3; /* Màu chữ khi di chuột */
+}
+
+.bioText {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+  transition: transform 0.3s; /* Hiệu ứng chuyển đổi */
+}
+
+.bioText:hover {
+  transform: scale(1.05); /* Phóng to văn bản khi di chuột */
+}
