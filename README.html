@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <style>
+        body {
+            font-family: 'Barlow', sans-serif;
+            color: #333;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            text-align: left;
+            overflow-y: auto;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            width: 100%;
+        }
+        .header p {
+            margin: 0;
+        }
+        .header .name {
+            font-size: 23px;
+            font-weight: 700;
+        }
+        .header .title {
+            font-size: 18px;
+        }
+        .contact {
+            text-align: left;
+            font-size: 14px;
+            border-left: 3px solid #ccc;
+            padding-left: 15px;
+            width: 32%;
+            display: flex;
+            flex-direction: column;
+        }
+        .contact div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3px;
+        }
+        .contact i {
+            margin-right: 5px;
+        }
+        .contact p {
+            margin: 1px;
+        }
+        .summary, .skills {
+            margin-top: 20px;
+            position: relative;
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .summary .title, .skills .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 10px;
+            background-color: #fff;
+            padding: 0 5px;
+            z-index: 1;
+        }
+        .summary .line, .skills .line {
+            flex-grow: 1;
+            height: 2px;
+            background-color: #ccc;
+            margin-left: 10px;
+        }
+        .bullet {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        .bullet .dot {
+            width: 20px;
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            margin-right: 5px;
+        }
+        .bullet .text {
+            display: flex;
+            align-items: flex-start;
+        }
+        .bullet .text p {
+            margin: 0;
+            padding-left: 5px;
+        }
+        .experience {
+            display: flex;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .experience .title {
+            width: 25%;
+            padding-right: 10px;
+        }
+        .experience .details {
+            width: 75%;
+            padding-left: 10px;
+            border-left: 2px solid #ccc;
+        }
+        p, li, ul {
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <p class="name">Trịnh Văn Long</p>
+                <p class="title">JAVA DEVELOPER</p>
+            </div>
+            <div class="contact">
+                <div>
+                    <p><i class="fas fa-phone"></i> 0865318627</p>    
+                </div>
+                <div>
+                    <p><i class="fas fa-envelope"></i> longtrinhvan97@gmail.com</p>    
+                </div>
+                <div>
+                    <p><i class="fas fa-map-marker-alt"></i> Thu Duc City, Viet Nam</p>    
+                </div>
+                <div>
+                    <p><i class="fas fa-graduation-cap"></i> Ho Chi Minh City University <br> of Technology and Education, 2016 - 2020</p>               
+                </div>
+            </div>
+        </div>
+
+        <div class="summary">
+            <div class="title">Summary</div>
+            <div class="line"></div>
+        </div>
+        
+        <div class="content">
+            <p>I am a backend developer with 3+ years of experience in Java.</p>
+            <p class="purpose">Professional purpose:</p>
+            <div class="bullet">
+                <div class="text">
+                    <div class="dot">•</div>
+                    <p>Applying my experience and knowledge to build backend systems that can handle real-time data needs across different applications.</p>
+                </div>
+                <div class="text">
+                    <div class="dot">•</div>
+                    <p>Gaining insights from data analysis experience to effectively manage and develop projects in a time-efficient manner.</p>
+                </div>
+                <div class="text">
+                    <div class="dot">•</div>
+                    <p>Continuously acquiring new knowledge and skills to stay updated with the latest trends and technologies.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills">
+            <div class="title">Skills</div>
+            <div class="line"></div>
+        </div>
+        
+        <div class="content">
+            <div class="bullet">
+                <div class="text">
+                    <div class="dot">•</div>
+                    <p><strong>Language:</strong> Java</p>
+                </div>
+                <div class="text">
+                    <div class="dot">•</div>
+                    <p><strong>Message queue:</strong> Kafka, RabbitMQ</p>
+                </div>
+                <div class="text">
+                    <div class="dot">•</div>
+                    <p><strong>Search engine:</strong> Elasticsearch</p>
+                </div>
+                <div class="text">
+                    <div class="dot">•</div>
+                    <p><strong>Caching:</strong> Hazelcast, Redis</p>
+                </div>
+                <div class="text">
+                    <div class="dot">•</div>
+                    <p><strong>Data processing system:</strong> Flink</p>
+                </div>
+                <div class="text">
+                    <div class="dot">•</div>
+                    <p><strong>Database:</strong> Oracle, MongoDB, MySQL</p>
+                </div>
+                <div class="text">
+                    <div class="dot">•</div>
+                    <p><strong>IDE:</strong> IntelliJ, Eclipse, Visual Studio Code</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills">
+            <div class="title">Summary of Experience</div>
+            <div class="line"></div>
+        </div>
+        
+        <div class="content">
+            <div class="bullet">
+                <div class="text">
+                    <p><strong>2020 - 06/2023: THE GIOI DI DONG</strong> - Java Developer</p>
+                </div>
+                <div class="text">
+                    <p><strong>09/2023 - now: VIHAT Software</strong> - Full Stack</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills">
+            <div class="title">Work Experience</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="content">
+            <div class="experience">
+                <div class="title">
+                    <p><strong>THE GIOI DI DONG</strong></p>
+                    <p>2020 - 06/2023</p>
+                </div>
+                <div class="details">
+                    <p><strong>Position:</strong></p>
+                    <ul>
+                        <li>JAVA DEVELOPER (10 MEMBER)</li>
+                    </ul>
+                    <p><strong>PROJECT NAME:</strong></p>
+                    <ul>
+                        <li>Website - TGDD/DMX/BHX, AVAKids, TopZone</li>
+                    </ul>
+                    <p><strong>TECH SKILLS:</strong></p>
+                    <ul>
+                        <li>Java, SpringBoot, Flink, RabbitMQ, Kafka, Hazelcast, Elasticsearch.</li>
+                    </ul>
+                    <p><strong>TOOLS:</strong></p>
+                    <ul>
+                        <li>IntelliJ IDEA, DBeaver, Kafka UI, Hazel UI, RabbitMQ UI, Elasticsearch extension.</li>
+                    </ul>
+                    <p><strong>RESPONSIBILITY:</strong></p>
+                    <ul>
+                        <li>Development, maintain the system, provide a solution to input data into the system support faster and more accurate input.</li>
+                    </ul>
+                    <p><strong>WORK DESCRIPTION:</strong></p>
+                    <ul>
+                        <li>Initialize/Transfer/Analyze data and write APIs to support displaying information and updating product status (price, stock, promotions), search functions, and product suggestion functions.</li>
+                        <li>Write a Schedule Job for APIs displaying top search results.</li>
+                        <li>Write a Job clean caching for old data.</li>
+                    </ul>
+
+                    <p><strong>DATA FLOW:</strong></p>
+                    <ul>
+                        <li>Handling push data from Injection System to RabbitMQ and Kafka.</li>
+                        <li>Using Flink to process data streams from RabbitMQ and Kafka to a storage system.</li>
+                        <li>Initializing data into Hazelcast (key/value) and Elasticsearch model.</li>
+                        <li>Forwarding messages to TransferJob (updating product status, calculating stock, and setting promotions via script) or AnalystJob (for APIs with search/suggestion functions).</li>
+                        <li>Handling exceptions with Graylog and sending messages via LINE.</li>
+                        <li>Integrating third-party APIs: Creating and updating product information, changing product status on e-commerce platforms.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="title">
+                    <p><strong>VIHAT Software</strong></p>
+                    <p>09/2024 - NOW</p>
+                </div>
+                <div class="details">
+                    <p><strong>Position:</strong></p>
+                    <ul>
+                        <li>JAVA DEVELOPER (4 MEMBER)</li>
+                    </ul>
+                    <p><strong>PROJECT NAME:</strong></p>
+                    <ul>
+                        <li>Draw Lucky</li>
+                    </ul>
+                    <p><strong>PROJECT DESCRIPTION:</strong></p>
+                    <ul>
+                        <li>This is the Castrol prize draw website (Region: Vietnam - Indonesia) that allows the system to manage spin history and schedule reminders for participants.</li>
+                    </ul>
+                    <p><strong>TECH SKILLS:</strong></p>
+                    <ul>
+                        <li>Java, AWS Lambda, AWS Cloudwatch, MySQL, JDBC.</li>
+                    </ul>
+                    <p><strong>TOOLS:</strong></p>
+                    <ul>
+                        <li>Jenkins, IntelliJ IDEA, DBeaver, Docker.</li>
+                    </ul>
+                    <p><strong>RESPONSIBILITY:</strong></p>
+                    <ul>
+                        <li>Receive requests to Business Analyst (BA) - Design and implement features.</li>
+                        <li>Research and integrate third-party APIs, and apply Lambda features to the system.</li>
+                        <li>Development, maintenance, and optimization of APIs and database queries.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="title">
+                    <p><strong>VIHAT Software</strong></p>
+                    <p>03/2024 - NOW</p>
+                </div>
+                <div class="details">
+                    <p><strong>Position:</strong></p>
+                    <ul>
+                        <li>FULL STACK (4 MEMBER)</li>
+                    </ul>
+                    <p><strong>PROJECT NAME:</strong></p>
+                    <ul>
+                        <li>Order Tracking</li>
+                    </ul>
+                    <p><strong>PROJECT DESCRIPTION:</strong></p>
+                    <ul>
+                        <li>This is a Multi-national Order Management Application that enables sellers to create and track orders.</li>
+                    </ul>
+                    <p><strong>TECH SKILLS:</strong></p>
+                    <ul>
+                        <li>Node.js, Loopback 4, React.js, MongoDB.</li>
+                    </ul>
+                    <p><strong>TOOLS:</strong></p>
+                    <ul>
+                        <li>Jenkins, IntelliJ IDEA, Robo 3T.</li>
+                    </ul>
+                    <p><strong>RESPONSIBILITY:</strong></p>
+                    <ul>
+                        <li>Receive requests from the Business Analyst (BA) - Design and implement features.</li>
+                        <li>Research and integrate third-party APIs.</li>
+                        <li>Develop and maintain the system, providing solutions to optimize system performance.</li>
+                        <li>Support development and fix UI bugs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
